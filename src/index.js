@@ -2,10 +2,12 @@
  * Created by gexuhui on 17/9/21.
  */
 import Vue from 'vue'
+import pluginCore from '../src/plugins/plugin-core'
+import pluginRouter from '../src/plugins/plugin-router'
 import App from '../src/pages/app'
-import yohoPluginRouter from '../src/plugins/plugin-router'
 
-Vue.use(yohoPluginRouter)
+Vue.use(pluginCore)
+Vue.use(pluginRouter)
 
 Vue.render({
   el: '#app',

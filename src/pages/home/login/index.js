@@ -6,4 +6,3 @@ export default {
   name: 'login',
   component: () => import(/* webpackChunkName: "home.login" */'./login')
 }
-

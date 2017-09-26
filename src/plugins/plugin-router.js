@@ -14,7 +14,7 @@ export default {
       }
       if (!children) {
         if (rous.path) {
-          rous.path = _.join(ps, '/') + (rous.path[0] === '/' ? '' : '/') + rous.path
+          rous.path = '/' + _.join(ps, '/') + (rous.path[0] === '/' ? '' : '/') + rous.path
         } else {
           rous.path = _.join(ps, '/') + '.html'
         }
@@ -38,17 +38,15 @@ export default {
     }
   },
   install(Vue) {
-    const childRouters = _.flattenDeep(this.loadRouters(pageRoutes))
+    const routes = _.flattenDeep(this.loadRouters(pageRoutes))
 
-    let routes = [{
-      path: '/',
-      children: childRouters
-    }]
+    let homePage = _.find(routes, router => router.name === 'home.overview')
 
-      Vue.$router = new Router({
-      routes: routes
+    homePage && (homePage.path = '/')
+
+    Vue.$router = new Router({
+      routes: routes,
+      mode: 'hash'
     })
-      console.log(routes)
-
   }
 }
