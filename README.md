@@ -25,6 +25,5 @@ npm run e2e
 
 # run all tests
 npm test
-```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+#feature/router 分支，主要编写  实现 router hash的构件 代码
