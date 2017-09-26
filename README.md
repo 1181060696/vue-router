@@ -26,4 +26,4 @@ npm run e2e
 # run all tests
 npm test
 
-#feature/router 分支，主要编写  实现 router hash的构件 代码
+#feature/router 分支，主要编写  实现 router <strong>hash ＋ 非嵌套<strong/>  的构件 代码  
