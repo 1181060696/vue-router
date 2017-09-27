@@ -46,7 +46,7 @@ export default {
 
     Vue.$router = new Router({
       routes: routes,
-      mode: 'hash'
+      mode: 'history'
     })
   }
 }
