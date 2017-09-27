@@ -27,3 +27,4 @@ npm run e2e
 npm test
 
 #feature/router 分支，主要编写  实现 router <strong>hash ＋ 非嵌套<strong/>  的构件 代码  
+#feature/router-history 分支，主要编写  实现 router <strong>history ＋ 非嵌套<strong/>  的构件 代码 
