@@ -1,3 +1,6 @@
 build/*.js
 config/*.js
 /src/plugins/*.js
+/src/pages/*.js
+/src/pages/home/login/*.js
+/src/pages/*.vue

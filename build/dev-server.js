@@ -51,8 +51,17 @@ Object.keys(proxyTable).forEach(function (context) {
   app.use(proxyMiddleware(options.filter || context, options))
 })
 
-// handle fallback for HTML5 history API
-app.use(require('connect-history-api-fallback')())
+// handle fallback for HTML5 history API 重写，指向history的写法
+app.use(require('connect-history-api-fallback')({
+  rewrites: [
+    { from: /\.html$/, to: '/index.html' },
+    { from: /.*?\.(js)|(css)$/,
+      to: (context) => {
+        return context.parsedUrl.pathname;
+      }
+    }
+  ]
+}))
 
 // serve webpack bundle output
 app.use(devMiddleware)
