@@ -37,26 +37,16 @@ export default {
       })
     }
   },
-  scrollBehavior(to, from, savedPosition)  {
-    if (savedPosition) {
-      return savedPosition
-    } else {
-      return { x: 0, y: 0 }
-    }
-  },
   install(Vue) {
     const routes = _.flattenDeep(this.loadRouters(pageRoutes))
 
     let homePage = _.find(routes, router => router.name === 'home.overview')
 
     homePage && (homePage.path = '/')
-    console.log(routes)
 
     Vue.$router = new Router({
       routes: routes,
-      mode: 'history',
-      linkActiveClass: 'link-active',
-      scrollBehavior: this.scrollBehavior
+      mode: 'history'
     })
   }
 }
