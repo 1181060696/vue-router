@@ -26,5 +26,5 @@ npm run e2e
 # run all tests
 npm test
 
-feature/router 分支，主要编写  实现 router __hash ＋ 非嵌套__  的构件 代码  
+feature/router 分支，主要编写  实现 router **hash ＋ 非嵌套**  的构件 代码  
 feature/router-history 分支，主要编写  实现 router <strong>history ＋ 非嵌套</strong>  的构件 代码 
